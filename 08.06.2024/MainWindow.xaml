@@ -1,0 +1,45 @@
+﻿<Window x:Class="_08._06._2024.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_08._06._2024"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Button Name="StartButton" Content="Start Threads" Click="StartButton_Click" Width="150" Height="30" Margin="10"/>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Number Thread Priority:" VerticalAlignment="Center"/>
+                <ComboBox Name="NumberPriority" Width="100" Margin="5">
+                    <ComboBoxItem Content="Lowest"/>
+                    <ComboBoxItem Content="BelowNormal"/>
+                    <ComboBoxItem Content="Normal" IsSelected="True"/>
+                    <ComboBoxItem Content="AboveNormal"/>
+                    <ComboBoxItem Content="Highest"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Letter Thread Priority:" VerticalAlignment="Center"/>
+                <ComboBox Name="LetterPriority" Width="100" Margin="5">
+                    <ComboBoxItem Content="Lowest"/>
+                    <ComboBoxItem Content="BelowNormal"/>
+                    <ComboBoxItem Content="Normal" IsSelected="True"/>
+                    <ComboBoxItem Content="AboveNormal"/>
+                    <ComboBoxItem Content="Highest"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Symbol Thread Priority:" VerticalAlignment="Center"/>
+                <ComboBox Name="SymbolPriority" Width="100" Margin="5">
+                    <ComboBoxItem Content="Lowest"/>
+                    <ComboBoxItem Content="BelowNormal"/>
+                    <ComboBoxItem Content="Normal" IsSelected="True"/>
+                    <ComboBoxItem Content="AboveNormal"/>
+                    <ComboBoxItem Content="Highest"/>
+                </ComboBox>
+            </StackPanel>
+            <TextBox Name="OutputTextBox" Width="500" Height="200" Margin="10" IsReadOnly="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Window>
