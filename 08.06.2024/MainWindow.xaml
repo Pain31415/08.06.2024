@@ -1,0 +1,25 @@
+﻿<Window x:Class="_08._06._2024.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dancing Progress Bars" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Number of Progress Bars:" VerticalAlignment="Center" Margin="5"/>
+            <TextBox x:Name="ProgressBarCountTextBox" Width="50" Margin="5" Text="5"/>
+            <Button Content="Start Dancing" Click="StartDancingButton_Click" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+            <ItemsControl ItemsSource="{Binding ProgressBars}" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <ProgressBar Height="20" Width="300" Value="{Binding Value}" Background="{Binding Color}" Margin="5"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+</Window>
